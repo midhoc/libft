@@ -6,11 +6,13 @@
 /*   By: hmidoun <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/09 11:39:18 by hmidoun           #+#    #+#             */
-/*   Updated: 2018/07/09 13:16:45 by hmidoun          ###   ########.fr       */
+/*   Updated: 2018/08/13 21:20:05 by midounhoc        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dest, char *src)
+#include "func.h"
+
+char	*ft_strcpy(char *dest, const char *src)
 {
 	int i;
 

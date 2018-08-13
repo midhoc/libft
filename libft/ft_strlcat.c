@@ -6,28 +6,18 @@
 /*   By: hmidoun <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/11 00:31:24 by hmidoun           #+#    #+#             */
-/*   Updated: 2018/07/11 00:45:07 by hmidoun          ###   ########.fr       */
+/*   Updated: 2018/08/13 20:49:22 by midounhoc        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int				ft_strlen(char *str)
-{
-	int i;
+#include "func.h"
 
-	i = 0;
-	while (*(str + i) != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
-
-unsigned int	ft_strlcat(char *dest, char *src, int size)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	char	*cp_dest;
-	char	*cp_src;
-	int		cp_size;
-	int		dest_lenth;
+	char	    *cp_dest;
+	const char	*cp_src;
+	int		    cp_size;
+	int		    dest_lenth;
 
 	cp_dest = dest;
 	cp_src = src;

@@ -1,24 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hmidoun <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/12 16:42:49 by hmidoun           #+#    #+#             */
-/*   Updated: 2018/08/13 21:21:36 by midounhoc        ###   ########.fr       */
+/*   Created: 2018/07/09 17:15:10 by hmidoun           #+#    #+#             */
+/*   Updated: 2018/08/13 21:03:33 by midounhoc        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "func.h"
 
-char	*ft_strdup(const char *src)
+char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 {
-	char	*tmp;
-	int		len;
+	int i;
+	int j;
 
-	len = ft_strlen(src);
-	tmp = (char*)malloc(sizeof(char) * len);
-	tmp = ft_strcpy(tmp, src);
-	return (tmp);
+	if (*to_find == '\0' && !len)
+		return ((char *)str);
+	j = 0;
+	i = 0;
+	while (str[i] != '\0' && i < len)
+	{
+		if (str[i] == to_find[j])
+		{
+			j++;
+			if (to_find[j] == '\0')
+				return ((char *)str + i - j + 1);
+		}
+		else
+		{
+			i = i - j;
+			j = 0;
+		}
+		i++;
+	}
+	return (0);
 }

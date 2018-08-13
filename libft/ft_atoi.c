@@ -6,7 +6,7 @@
 /*   By: hmidoun <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/06 12:48:51 by hmidoun           #+#    #+#             */
-/*   Updated: 2018/07/08 03:26:57 by hmidoun          ###   ########.fr       */
+/*   Updated: 2018/08/13 20:54:23 by midounhoc        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,5 @@ int		ft_atoi(char *str)
 		number = number * 10 + *(str + i) - '0';
 		i++;
 	}
-	number *= neg;
-	return (number);
+	return (number * neg);
 }

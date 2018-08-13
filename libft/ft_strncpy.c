@@ -6,11 +6,13 @@
 /*   By: hmidoun <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/09 13:24:23 by hmidoun           #+#    #+#             */
-/*   Updated: 2018/07/10 12:15:55 by hmidoun          ###   ########.fr       */
+/*   Updated: 2018/08/13 21:17:24 by midounhoc        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+#include "func.h"
+
+char	*ft_strncpy(char *dest, const char *src, size_t n)
 {
 	unsigned int i;
 

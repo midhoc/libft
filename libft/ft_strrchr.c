@@ -6,14 +6,16 @@
 /*   By: midounhocine <mdho@hotmail.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/09 23:39:15 by midounhoc         #+#    #+#             */
-/*   Updated: 2018/08/09 23:39:20 by midounhoc        ###   ########.fr       */
+/*   Updated: 2018/08/13 21:11:20 by midounhoc        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "func.h"
 
 char *ft_strrchr(const char *s, int c)
 {
     int i;
-    char *find;
+    const char *find;
 
     find = NULL;
     i = 0;
@@ -24,6 +26,6 @@ char *ft_strrchr(const char *s, int c)
         i++;
     }
     if (c == '\0')
-        return(s + i);
+        return((char *)(s + i));
     return(NULL);
 }
