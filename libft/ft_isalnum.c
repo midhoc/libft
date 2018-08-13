@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: midounhocine <mdho@hotmail.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/09 23:59:18 by midounhoc         #+#    #+#             */
-/*   Updated: 2018/08/13 20:38:03 by midounhoc        ###   ########.fr       */
+/*   Created: 2018/08/13 20:26:26 by midounhoc         #+#    #+#             */
+/*   Updated: 2018/08/13 20:39:16 by midounhoc        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalpha(int c)
+#include "func.h"
+
+int ft_isalnum(int c)
 {
-    if (('A' <= c && c <= 'Z') || ('a' <= c && c <= 'z'))
-        return (1);
-    return(0);
+    return (ft_isalpha(c) || ft_isdigit(c));
 }
