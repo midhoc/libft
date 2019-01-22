@@ -1,28 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: midounhocine <mdho@hotmail.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/10 00:05:08 by midounhoc         #+#    #+#             */
-/*   Updated: 2019/01/22 15:03:32 by midounhoc        ###   ########.fr       */
+/*   Created: 2019/01/22 15:49:55 by midounhoc         #+#    #+#             */
+/*   Updated: 2019/01/22 15:53:31 by midounhoc        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void    *ft_memset(void *b, int c, size_t len)
+void    ft_striteri(char *s, void(*f)(unsigned int, char*))
 {
-    unsigned char *str;
-    size_t i;
-
-    i = 0;
-    str = (unsigned char *) b;
-    while (i < len)
-    {    
-        str[i] = c;
+    int i = 0;
+    while(s[i] != '\0')
+    {
+        f(i,s+i);
         i++;
     }
-    return (b);
 }

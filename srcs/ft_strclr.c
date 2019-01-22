@@ -1,28 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strclr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: midounhocine <mdho@hotmail.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/10 00:05:08 by midounhoc         #+#    #+#             */
-/*   Updated: 2019/01/22 15:03:32 by midounhoc        ###   ########.fr       */
+/*   Created: 2019/01/22 15:37:55 by midounhoc         #+#    #+#             */
+/*   Updated: 2019/01/22 15:39:46 by midounhoc        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include"libft.h"
 
-void    *ft_memset(void *b, int c, size_t len)
+void ft_strclr(char *s)
 {
-    unsigned char *str;
-    size_t i;
-
-    i = 0;
-    str = (unsigned char *) b;
-    while (i < len)
-    {    
-        str[i] = c;
+    int i = 0;
+    while(s[i] !='\0')
+    {
+        s[i] = '\0';
         i++;
     }
-    return (b);
 }

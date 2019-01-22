@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: midounhocine <mdho@hotmail.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/10 00:05:08 by midounhoc         #+#    #+#             */
-/*   Updated: 2019/01/22 15:03:32 by midounhoc        ###   ########.fr       */
+/*   Created: 2019/01/22 16:02:50 by midounhoc         #+#    #+#             */
+/*   Updated: 2019/01/22 16:10:38 by midounhoc        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    *ft_memset(void *b, int c, size_t len)
+char*   ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-    unsigned char *str;
-    size_t i;
-
-    i = 0;
-    str = (unsigned char *) b;
-    while (i < len)
-    {    
-        str[i] = c;
+    int i = 0;
+    char *str;
+    str = (char*)malloc(sizeof(char)*ft_strlen(s));
+    if(!str) return(NULL);
+    while(s[i] != '\0')
+    {
+        str[i] = f(i,s[i]);
         i++;
     }
-    return (b);
+    str[i] ='\0';
+    return(str);
 }
