@@ -1,25 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hmidoun <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: midounhocine <mdho@hotmail.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/05 21:15:06 by hmidoun           #+#    #+#             */
-/*   Updated: 2018/08/13 21:22:31 by midounhoc        ###   ########.fr       */
+/*   Created: 2019/02/05 15:02:57 by midounhoc         #+#    #+#             */
+/*   Updated: 2019/02/05 15:04:48 by midounhoc        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-size_t		ft_strlen(const char *str)
+#include"libft.h"
+void    ft_putchar(char c)
 {
-	int i;
-
-	i = 0;
-	while (*(str + i) != '\0')
-	{
-		i++;
-	}
-	return (i);
+    write(1,&c,1);
 }

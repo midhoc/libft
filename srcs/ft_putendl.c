@@ -1,25 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putendl.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hmidoun <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: midounhocine <mdho@hotmail.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/05 21:15:06 by hmidoun           #+#    #+#             */
-/*   Updated: 2018/08/13 21:22:31 by midounhoc        ###   ########.fr       */
+/*   Created: 2019/02/05 15:06:10 by midounhoc         #+#    #+#             */
+/*   Updated: 2019/02/05 15:07:14 by midounhoc        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include"libft.h"
 
-size_t		ft_strlen(const char *str)
+void    ft_putendl(char const *s)
 {
-	int i;
-
-	i = 0;
-	while (*(str + i) != '\0')
-	{
-		i++;
-	}
-	return (i);
+    ft_putstr(s);
+    ft_putchar('\n');
 }
