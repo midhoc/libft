@@ -6,13 +6,13 @@
 /*   By: hmidoun <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/05 21:15:06 by hmidoun           #+#    #+#             */
-/*   Updated: 2019/02/11 13:26:53 by midounhoc        ###   ########.fr       */
+/*   Updated: 2019/02/05 15:20:10 by midounhoc        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-void	ft_putstr(char const *str)
+void	ft_putstr(char *str)
 {
 	int i;
 
