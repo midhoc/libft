@@ -6,7 +6,7 @@
 /*   By: hmidoun <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/09 17:15:10 by hmidoun           #+#    #+#             */
-/*   Updated: 2018/08/13 21:03:33 by midounhoc        ###   ########.fr       */
+/*   Updated: 2019/02/11 14:11:05 by midounhoc        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 {
-	int i;
+	size_t i;
 	int j;
 
 	if (*to_find == '\0' && !len)

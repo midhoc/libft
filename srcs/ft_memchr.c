@@ -6,7 +6,7 @@
 /*   By: midounhocine <mdho@hotmail.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/13 19:24:01 by midounhoc         #+#    #+#             */
-/*   Updated: 2018/08/13 19:40:26 by midounhoc        ###   ########.fr       */
+/*   Updated: 2019/02/11 14:07:38 by midounhoc        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void    *ft_memchr(const void *s, int c, size_t n)
 {
-    int i;
+    size_t  i;
 
     i = -1;
     while (++i < n)
