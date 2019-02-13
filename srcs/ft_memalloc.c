@@ -6,7 +6,7 @@
 /*   By: midounhocine <mdho@hotmail.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/22 14:38:52 by midounhoc         #+#    #+#             */
-/*   Updated: 2019/01/22 15:05:29 by midounhoc        ###   ########.fr       */
+/*   Updated: 2019/02/13 11:02:05 by midounhoc        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 void*   ft_memalloc(size_t  size)
 {
     void*   p;
-    p = malloc(size);
+    p = (void *)malloc(size * sizeof(size_t));
     if (p == NULL)  return NULL;
-    return ft_memset(p, 0, size);
+    ft_bzero(p,size);
+    return (p);
 }

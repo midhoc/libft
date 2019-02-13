@@ -6,7 +6,7 @@
 /*   By: midounhocine <mdho@hotmail.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/22 16:44:28 by midounhoc         #+#    #+#             */
-/*   Updated: 2019/01/22 16:52:09 by midounhoc        ###   ########.fr       */
+/*   Updated: 2019/02/13 12:38:54 by midounhoc        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,15 @@
 char* ft_strjoin(char const *s1, char const *s2)
 {
     char* str;
-    int i = 0, len_s1 = ft_strlen(s1);
-    str = (char*)malloc(sizeof(char)*(len_s1 + ft_strlen(s2)));
-    if(!str) return(NULL);
+    int i, len_s1;
+
+    if (!s1 || !s2)
+        return(NULL);
+    len_s1 = ft_strlen(s1);
+    str = ft_strnew(len_s1 + ft_strlen(s2));
+    if(!str) 
+        return(NULL);
+    i = 0;
     while(s1[i] != '\0')
     {
         str[i] = s1[i];

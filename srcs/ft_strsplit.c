@@ -6,7 +6,7 @@
 /*   By: midounhocine <mdho@hotmail.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/31 15:26:21 by midounhoc         #+#    #+#             */
-/*   Updated: 2019/02/11 13:42:57 by midounhoc        ###   ########.fr       */
+/*   Updated: 2019/02/13 12:42:10 by midounhoc        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,8 +83,11 @@ char    **ft_strsplit(char const *str, char c)
     j = 0;
     i = 0;
     car = 0;
+    if(!str)
+        return(NULL);
     tab_str = (char **)malloc(sizeof(char *) * (nbr_word(str, c) + 1));
-    if(tab_str == NULL) return(NULL);
+    if(tab_str == NULL) 
+        return(NULL);
     while (str[i] != '\0')
     {
             if (str[i] == c)

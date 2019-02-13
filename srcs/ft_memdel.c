@@ -6,13 +6,16 @@
 /*   By: midounhocine <mdho@hotmail.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/22 15:06:42 by midounhoc         #+#    #+#             */
-/*   Updated: 2019/01/22 15:11:33 by midounhoc        ###   ########.fr       */
+/*   Updated: 2019/02/13 11:06:43 by midounhoc        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 void    ft_memdel(void **ap)
 {
+    if (ap)
+    {
     free(*ap);
-    ap = NULL;
+    *ap = NULL;
+    }
 }

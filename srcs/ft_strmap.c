@@ -6,19 +6,23 @@
 /*   By: midounhocine <mdho@hotmail.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/22 15:54:01 by midounhoc         #+#    #+#             */
-/*   Updated: 2019/01/22 16:00:23 by midounhoc        ###   ########.fr       */
+/*   Updated: 2019/02/13 12:23:22 by midounhoc        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include"libft.h"
 char*   ft_strmap(char const *s, char (*f)(char))
 {
-    int i = 0;
+    int i;
     char *str;
-    str = (char*)malloc(sizeof(char)* ft_strlen(s));
-    if (!str) return(NULL);
+    
+    i = 0;
+    if (!s)
+        return(NULL);
+    str = ft_strnew(ft_strlen(s));
+    if (!str || !f) return(NULL);
     while(s[i] != '\0')
     {
-        str[i] = f(s[i]);
+        str[i] = (*f)(s[i]);
         i++;
     }
     str[i] = '\0';

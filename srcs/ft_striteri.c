@@ -6,16 +6,21 @@
 /*   By: midounhocine <mdho@hotmail.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/22 15:49:55 by midounhoc         #+#    #+#             */
-/*   Updated: 2019/01/22 15:53:31 by midounhoc        ###   ########.fr       */
+/*   Updated: 2019/02/13 12:04:17 by midounhoc        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void    ft_striteri(char *s, void(*f)(unsigned int, char*))
 {
-    int i = 0;
-    while(s[i] != '\0')
+    int i;
+
+    i = 0;
+    if(s && f)
     {
-        f(i,s+i);
-        i++;
+         while(s[i])
+        {
+            f(i,s+i);
+            i++;
+        }
     }
 }

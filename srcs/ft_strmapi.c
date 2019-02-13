@@ -6,7 +6,7 @@
 /*   By: midounhocine <mdho@hotmail.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/22 16:02:50 by midounhoc         #+#    #+#             */
-/*   Updated: 2019/01/22 16:10:38 by midounhoc        ###   ########.fr       */
+/*   Updated: 2019/02/13 12:27:39 by midounhoc        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,20 @@
 
 char*   ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-    int i = 0;
+    int i;
     char *str;
-    str = (char*)malloc(sizeof(char)*ft_strlen(s));
-    if(!str) return(NULL);
+    
+    if (!s)
+        return(NULL);
+    str = (ft_strnew(ft_strlen(s)));
+    if(!str || !f) 
+        return(NULL);
+    i = 0;
     while(s[i] != '\0')
     {
         str[i] = f(i,s[i]);
         i++;
     }
-    str[i] ='\0';
+    str[i] = '\0';
     return(str);
 }

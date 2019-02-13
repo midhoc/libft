@@ -6,17 +6,22 @@
 /*   By: midounhocine <mdho@hotmail.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/22 15:40:25 by midounhoc         #+#    #+#             */
-/*   Updated: 2019/01/22 15:46:05 by midounhoc        ###   ########.fr       */
+/*   Updated: 2019/02/13 12:02:22 by midounhoc        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 void    ft_striter(char *s, void (*f)(char*))
 {
-    int i=0;
-    while(s[i] != '\0')
+    int i;
+
+    i = 0;
+    if (s && f)
     {
-        f(s+i);
-        i++;
+        while(s[i])
+        {
+            f(s+i);
+             i++;
+        }
     }
 }

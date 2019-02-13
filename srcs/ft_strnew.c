@@ -6,7 +6,7 @@
 /*   By: midounhocine <mdho@hotmail.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/22 15:14:29 by midounhoc         #+#    #+#             */
-/*   Updated: 2019/02/11 14:12:24 by midounhoc        ###   ########.fr       */
+/*   Updated: 2019/02/13 11:16:07 by midounhoc        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char* ft_strnew(size_t size)
     char*   str;
     size_t  i = 0;
     str = (char*)malloc(size * sizeof(char));
-    if(str == NULL) return NULL;
+    if(str == NULL) return (NULL);
     while(i < size)
     {
         str[i] = '\0';

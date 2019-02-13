@@ -6,7 +6,7 @@
 /*   By: midounhocine <mdho@hotmail.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/22 15:24:04 by midounhoc         #+#    #+#             */
-/*   Updated: 2019/01/22 15:33:58 by midounhoc        ###   ########.fr       */
+/*   Updated: 2019/02/13 11:22:14 by midounhoc        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,9 @@
 
 void ft_strdel(char **as)
 {
-    int i=0;
-    while(as[i] != '\0')
+    if(as)
     {
-        free(as[i]);
-        i++;
+        free(*as);
+        *as =  NULL;
     }
 }
