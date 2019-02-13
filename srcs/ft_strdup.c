@@ -6,7 +6,7 @@
 /*   By: hmidoun <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/12 16:42:49 by hmidoun           #+#    #+#             */
-/*   Updated: 2018/08/13 21:21:36 by midounhoc        ###   ########.fr       */
+/*   Updated: 2019/02/13 09:13:00 by midounhoc        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strdup(const char *src)
 
 	len = ft_strlen(src);
 	tmp = (char*)malloc(sizeof(char) * len);
-	tmp = ft_strcpy(tmp, src);
+    if(!tmp)
+        return(NULL);
+    tmp = ft_strcpy(tmp, src);
 	return (tmp);
 }
