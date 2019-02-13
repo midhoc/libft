@@ -6,7 +6,7 @@
 /*   By: midounhocine <mdho@hotmail.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/31 12:48:07 by midounhoc         #+#    #+#             */
-/*   Updated: 2019/02/13 12:45:24 by midounhoc        ###   ########.fr       */
+/*   Updated: 2019/02/13 14:40:34 by midounhoc        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char* ft_strtrim(char const *s)
         d_len++;
     while((s[s_len-1] == ' '||s[s_len-1] == '\n'||s[s_len-1] == '\t') && s_len-1 >= d_len) 
         s_len--;
-    str = ft_strnew(s_len-d_len+1);
+    str = ft_strnew(s_len-d_len);
     if(str == NULL) return NULL;
     while(i + d_len< s_len)
      {

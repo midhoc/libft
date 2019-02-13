@@ -6,23 +6,21 @@
 /*   By: hmidoun <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/06 12:48:51 by hmidoun           #+#    #+#             */
-/*   Updated: 2018/08/13 20:54:23 by midounhoc        ###   ########.fr       */
+/*   Updated: 2019/02/13 16:16:54 by midounhoc        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_atoi(char *str)
 {
-	int i;
-	int neg;
-	int number;
+	int     i;
+	int     neg;
+	int     number;
 
 	number = 0;
 	neg = 1;
 	i = 0;
-	while ((*(str + i) >= 0 && *(str + i) < 33))
-	{
+	while (str[i] == 32 || (str[i] >= 9  && str[i] <= 13))
 		i++;
-	}
 	if (*(str + i) == '-')
 	{
 		neg = -1;
@@ -35,5 +33,5 @@ int		ft_atoi(char *str)
 		number = number * 10 + *(str + i) - '0';
 		i++;
 	}
-	return (number * neg);
+    return (number * neg);
 }
