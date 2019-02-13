@@ -6,7 +6,7 @@
 #    By: hmidoun <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/07/23 15:42:50 by hmidoun           #+#    #+#              #
-#    Updated: 2019/02/12 19:00:50 by midounhoc        ###   ########.fr        #
+#    Updated: 2019/02/13 08:16:51 by midounhoc        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,7 @@ all : $(NAME)
 $(NAME) :
 	$(CC) $(FLAG) -c $(SRC) -I $(HEADER)
 	ar rc $(NAME) $(OBJ)
+	ranlib $(NAME)
 
 clean :
 	rm -f $(OBJ)
@@ -29,3 +30,5 @@ fclean : clean
 	rm -f $(NAME)
 
 re : fclean all
+
+.PHONY : clean fclean

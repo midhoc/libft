@@ -6,7 +6,7 @@
 /*   By: midounhocine <mdho@hotmail.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/05 13:02:47 by midounhoc         #+#    #+#             */
-/*   Updated: 2019/02/05 14:49:01 by midounhoc        ###   ########.fr       */
+/*   Updated: 2019/02/12 19:20:05 by midounhoc        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static char*    ft_maxint()
 
     str=(char *)malloc(sizeof(char)*11);
     if(str==NULL) return(NULL);
-    return(strcpy(str,"-2147483648"));
+    return(ft_strcpy(str,"-2147483648"));
 }
     
 static  int     power_neg(int n, int *len, int *div,int *neg)

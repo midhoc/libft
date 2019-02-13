@@ -6,13 +6,13 @@
 /*   By: midounhocine <mdho@hotmail.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/09 23:50:15 by midounhoc         #+#    #+#             */
-/*   Updated: 2018/08/09 23:53:43 by midounhoc        ###   ########.fr       */
+/*   Updated: 2019/02/12 19:52:35 by midounhoc        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_isprint(int c)
 {
-	if ((33 <= c && c <= 127) || c == '\0')
+    if (32 <= c && c < 127)
 	    return (1);
     return (0);
 }

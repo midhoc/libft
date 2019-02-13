@@ -6,7 +6,7 @@
 /*   By: midounhocine <mdho@hotmail.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/12 13:24:25 by midounhoc         #+#    #+#             */
-/*   Updated: 2019/02/11 14:09:43 by midounhoc        ###   ########.fr       */
+/*   Updated: 2019/02/12 19:18:32 by midounhoc        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,23 +27,4 @@ void    *ft_memmove(void *dst, const void *src, size_t n)
         i++;
     }
     return (dst);
-}
-
-#include <stdio.h>
-int main (void)
-{
-    char string [] = "stackoverflow";
-    char *third, *fourth;
-    third = string;
-    fourth = string;
-
-
-    char str[] = "foo-bar";
-   memmove(&str[3],&str[4],4);
-    
-    puts(str);
-    printf("%s\n",string);
-   memcpy(fourth+5, fourth, 7);
-   puts(fourth);
-    return 0;
 }
