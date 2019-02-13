@@ -6,17 +6,17 @@
 /*   By: midounhocine <mdho@hotmail.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/05 13:02:47 by midounhoc         #+#    #+#             */
-/*   Updated: 2019/02/12 19:20:05 by midounhoc        ###   ########.fr       */
+/*   Updated: 2019/02/13 12:57:16 by midounhoc        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
-#include"stdio.h"
+
 static char*    ft_maxint()
 {
     char    *str;
 
-    str=(char *)malloc(sizeof(char)*11);
+    str=ft_strnew(11);
     if(str==NULL) return(NULL);
     return(ft_strcpy(str,"-2147483648"));
 }
@@ -59,6 +59,7 @@ static  char*           ft_fill_str(char *str, int n,int len, int div, int neg)
         div /= 10;
         i++;
     }
+    str[i] = '\0';
     return(str);
 }
 
@@ -69,10 +70,11 @@ char*           ft_itoa(int n)
     int     neg;
     char*   str;
 
-    str = NULL;
-    if(n == -2147483648) return(ft_maxint());
+    if(n == -2147483648) 
+        return(ft_maxint());
     n = power_neg(n,&len,&div,&neg);
-    str=(char*)malloc(sizeof(char)*(len));
-    if(str==NULL) return(NULL);
+    str=ft_strnew(len);
+    if(str==NULL) 
+        return(NULL);
     return(ft_fill_str(str,n,len,div,neg)); 
-}          
+}
