@@ -6,7 +6,11 @@
 /*   By: midounhocine <mdho@hotmail.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/05 13:02:47 by midounhoc         #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2019/02/13 14:48:13 by midounhoc        ###   ########.fr       */
+=======
+/*   Updated: 2019/02/13 12:57:16 by midounhoc        ###   ########.fr       */
+>>>>>>> 67a891219958df3612e4bf8cd92c62cac56da015
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +77,11 @@ char*           ft_itoa(int n)
     if(n == -2147483648) 
         return(ft_maxint());
     n = power_neg(n,&len,&div,&neg);
+<<<<<<< HEAD
     str=ft_strnew(len + 1);
+=======
+    str=ft_strnew(len);
+>>>>>>> 67a891219958df3612e4bf8cd92c62cac56da015
     if(str==NULL) 
         return(NULL);
     return(ft_fill_str(str,n,len,div,neg)); 
