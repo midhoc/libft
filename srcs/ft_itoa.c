@@ -21,14 +21,12 @@ static char*    ft_maxint()
     return(ft_strcpy(str,"-2147483648"));
 }
     
-static  int     power_neg(int n, int *len, int *div,int *neg)
+static  void     power_neg(int n, int *len, int *div)
 {
     *div = 1;
     *len = 0; 
-    *neg = 0;
     if(n<0)
     {
-        *neg = 1;
         (*len) += 1;
         n *= -1;
      }
@@ -38,19 +36,18 @@ static  int     power_neg(int n, int *len, int *div,int *neg)
             (*len) += 1;
             (*div) *=10;
          }
-    return(n);
 }
 
-static  char*           ft_fill_str(char *str, int n,int len, int div, int neg)
+static  char*           ft_fill_str(char *str, int n,int len, int div)
 {
     int i;
 
     i = 0;
     while (i<= len)
     {
-        if(neg == 1)
+        if(n < 0)
         {
-            neg = 0;
+            n *= -1;
             str[0]='-';
             i++;
         }
@@ -67,14 +64,13 @@ char*           ft_itoa(int n)
 {
     int     len;
     int     div;
-    int     neg;
     char*   str;
 
     if(n == -2147483648) 
         return(ft_maxint());
-    n = power_neg(n,&len,&div,&neg);
+    power_neg(n,&len,&div);
     str=ft_strnew(len + 1);
     if(str==NULL) 
         return(NULL);
-    return(ft_fill_str(str,n,len,div,neg)); 
+    return(ft_fill_str(str,n,len,div)); 
 }
