@@ -6,11 +6,11 @@
 /*   By: hmidoun <hmidoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/15 15:10:12 by hmidoun           #+#    #+#             */
-/*   Updated: 2019/04/15 15:33:24 by hmidoun          ###   ########.fr       */
+/*   Updated: 2019/04/16 15:23:48 by hmidoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	int i;
 

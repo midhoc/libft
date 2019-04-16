@@ -6,11 +6,11 @@
 /*   By: hmidoun <hmidoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/06 12:48:51 by hmidoun           #+#    #+#             */
-/*   Updated: 2019/04/15 15:30:28 by hmidoun          ###   ########.fr       */
+/*   Updated: 2019/04/16 15:22:33 by hmidoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_atoi(char *str)
+int		ft_atoi(const char *str)
 {
 	int		i;
 	int		neg;
