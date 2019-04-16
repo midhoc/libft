@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: midounhocine <mdho@hotmail.fr>             +#+  +:+       +#+        */
+/*   By: hmidoun <hmidoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/09 23:59:18 by midounhoc         #+#    #+#             */
-/*   Updated: 2018/08/13 20:38:03 by midounhoc        ###   ########.fr       */
+/*   Updated: 2019/04/15 14:54:22 by hmidoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalpha(int c)
+int	ft_isalpha(int c)
 {
-    if (('A' <= c && c <= 'Z') || ('a' <= c && c <= 'z'))
-        return (1);
-    return(0);
+	if (('A' <= c && c <= 'Z') || ('a' <= c && c <= 'z'))
+		return (1);
+	return (0);
 }

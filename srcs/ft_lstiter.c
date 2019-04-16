@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: midounhocine <mdho@hotmail.fr>             +#+  +:+       +#+        */
+/*   By: hmidoun <hmidoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/14 14:13:15 by midounhoc         #+#    #+#             */
-/*   Updated: 2019/02/14 14:15:15 by midounhoc        ###   ########.fr       */
+/*   Updated: 2019/04/15 15:31:04 by hmidoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
-void ft_lstiter(t_list *lst, void(*f)(t_list *elem))
+void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
-    if(lst)
-    {
-        f(lst);
-        ft_lstiter(lst->next, *f);
-    }
+	if (lst)
+	{
+		f(lst);
+		ft_lstiter(lst->next, *f);
+	}
 }

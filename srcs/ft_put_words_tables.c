@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_print_words_tables.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hmidoun <hmidoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/09 23:39:15 by midounhoc         #+#    #+#             */
-/*   Updated: 2019/04/15 15:19:57 by hmidoun          ###   ########.fr       */
+/*   Created: 2018/07/17 20:25:03 by hmidoun           #+#    #+#             */
+/*   Updated: 2019/04/15 18:14:38 by hmidoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+void	ft_put_words_tables(char **tab)
 {
-	int		i;
-	char	*find;
+	int i;
 
-	find = NULL;
 	i = 0;
-	while (s[i])
+	while (tab[i])
 	{
-		if (s[i] == c)
-			find = (char *)(s + i);
+		ft_putstr(tab[i]);
+		ft_putchar('\n');
 		i++;
 	}
-	if (c == '\0')
-		return ((char *)(s + i));
-	return (find);
 }

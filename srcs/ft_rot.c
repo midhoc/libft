@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_rot.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hmidoun <hmidoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/09 23:39:15 by midounhoc         #+#    #+#             */
-/*   Updated: 2019/04/15 15:19:57 by hmidoun          ###   ########.fr       */
+/*   Created: 2018/07/13 00:11:09 by hmidoun           #+#    #+#             */
+/*   Updated: 2019/04/15 18:35:59 by hmidoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char	*ft_strrchr(const char *s, int c)
+char	*ft_rot(char *str, int rot)
 {
-	int		i;
-	char	*find;
+	int i;
 
-	find = NULL;
 	i = 0;
-	while (s[i])
+	while (str[i] != '\0')
 	{
-		if (s[i] == c)
-			find = (char *)(s + i);
+		if ('a' <= str[i] && str[i] <= 'z')
+		{
+			str[i] -= 'a';
+			str[i] = ((str[i] + rot) % 26) + 'a';
+		}
+		else if ('A' <= str[i] && str[i] <= 'Z')
+		{
+			str[i] -= 'A';
+			str[i] = ((str[i] + rot) % 26) + 'A';
+		}
 		i++;
 	}
-	if (c == '\0')
-		return ((char *)(s + i));
-	return (find);
+	return (str);
 }

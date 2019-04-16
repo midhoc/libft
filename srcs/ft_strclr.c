@@ -3,26 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strclr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: midounhocine <mdho@hotmail.fr>             +#+  +:+       +#+        */
+/*   By: hmidoun <hmidoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/22 15:37:55 by midounhoc         #+#    #+#             */
-/*   Updated: 2019/02/13 11:37:14 by midounhoc        ###   ########.fr       */
+/*   Updated: 2019/04/15 15:06:25 by hmidoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
-void ft_strclr(char *s)
+void	ft_strclr(char *s)
 {
-    int i;
+	int i;
 
-    if (s)
-    {
-        i = 0;
-         while(s[i])
-        {
-            s[i] = 0;
-            i++;
-        }
-    }
+	if (s)
+	{
+		i = 0;
+		while (s[i])
+		{
+			s[i] = 0;
+			i++;
+		}
+	}
 }

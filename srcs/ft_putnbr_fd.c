@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hmidoun <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: hmidoun <hmidoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/04 22:25:04 by hmidoun           #+#    #+#             */
-/*   Updated: 2019/02/11 13:49:09 by midounhoc        ###   ########.fr       */
+/*   Updated: 2019/04/15 15:03:29 by hmidoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 void	ft_putnbr_fd(int nb, int fd)
 {
@@ -19,11 +19,11 @@ void	ft_putnbr_fd(int nb, int fd)
 	counter = 1;
 	if (nb < 0)
 	{
-		ft_putchar_fd('-',fd);
+		ft_putchar_fd('-', fd);
 		if (nb == -2147483648)
 		{
 			nb = -147483648;
-			ft_putchar_fd('2',fd);
+			ft_putchar_fd('2', fd);
 		}
 		nb *= -1;
 	}
@@ -33,7 +33,7 @@ void	ft_putnbr_fd(int nb, int fd)
 	}
 	while (counter >= 1)
 	{
-		ft_putchar_fd('0' + nb / counter,fd);
+		ft_putchar_fd('0' + nb / counter, fd);
 		nb = nb - (nb / counter) * counter;
 		counter /= 10;
 	}

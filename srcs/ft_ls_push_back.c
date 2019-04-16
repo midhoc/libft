@@ -1,31 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_list_push_back.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hmidoun <hmidoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/09 23:39:15 by midounhoc         #+#    #+#             */
-/*   Updated: 2019/04/15 15:19:57 by hmidoun          ###   ########.fr       */
+/*   Created: 2018/07/20 14:21:51 by hmidoun           #+#    #+#             */
+/*   Updated: 2019/04/15 18:14:08 by hmidoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+void	ft_ls_push_back(t_list **head, t_list *new)
 {
-	int		i;
-	char	*find;
+	t_list		*temp;
 
-	find = NULL;
-	i = 0;
-	while (s[i])
+	temp = *head;
+	if (temp == NULL)
+		*head = new;
+	else
 	{
-		if (s[i] == c)
-			find = (char *)(s + i);
-		i++;
+		while (temp->next != NULL)
+			temp = temp->next;
+		*temp->next = *new;
 	}
-	if (c == '\0')
-		return ((char *)(s + i));
-	return (find);
 }

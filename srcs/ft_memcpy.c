@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: midounhocine <mdho@hotmail.fr>             +#+  +:+       +#+        */
+/*   By: hmidoun <hmidoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/12 13:24:25 by midounhoc         #+#    #+#             */
-/*   Updated: 2019/01/14 14:10:54 by midounhoc        ###   ########.fr       */
+/*   Updated: 2019/04/15 14:49:56 by hmidoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    *ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-    while (n--)
-                ((char *)dst)[n] = ((char *)src)[n];
-    return (dst);
+	while (n--)
+		((char *)dst)[n] = ((char *)src)[n];
+	return (dst);
 }

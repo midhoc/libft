@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: midounhocine <mdho@hotmail.fr>             +#+  +:+       +#+        */
+/*   By: hmidoun <hmidoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/09 23:50:15 by midounhoc         #+#    #+#             */
-/*   Updated: 2019/02/12 19:52:35 by midounhoc        ###   ########.fr       */
+/*   Updated: 2019/04/15 14:37:44 by hmidoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_isprint(int c)
 {
-    if (32 <= c && c < 127)
-	    return (1);
-    return (0);
+	if (32 <= c && c < 127)
+		return (1);
+	return (0);
 }

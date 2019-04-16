@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_ls_size.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hmidoun <hmidoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/09 23:39:15 by midounhoc         #+#    #+#             */
-/*   Updated: 2019/04/15 15:19:57 by hmidoun          ###   ########.fr       */
+/*   Created: 2018/07/24 16:38:13 by hmidoun           #+#    #+#             */
+/*   Updated: 2019/04/15 18:44:40 by hmidoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+int	ft_ls_size(t_list *head)
 {
-	int		i;
-	char	*find;
+	t_list		*temp;
+	int			size;
 
-	find = NULL;
-	i = 0;
-	while (s[i])
+	size = 0;
+	temp = head;
+	if (temp != NULL)
 	{
-		if (s[i] == c)
-			find = (char *)(s + i);
-		i++;
+		size++;
+		while (temp->next != NULL)
+		{
+			temp = temp->next;
+			size++;
+		}
 	}
-	if (c == '\0')
-		return ((char *)(s + i));
-	return (find);
+	return (size);
 }

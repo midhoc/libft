@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: midounhocine <mdho@hotmail.fr>             +#+  +:+       +#+        */
+/*   By: hmidoun <hmidoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/09 23:47:04 by midounhoc         #+#    #+#             */
-/*   Updated: 2018/08/09 23:47:28 by midounhoc        ###   ########.fr       */
+/*   Updated: 2019/04/15 15:30:11 by hmidoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
-		return(c - 'A' + 'a');
+		return (c - 'A' + 'a');
 	return (c);
 }

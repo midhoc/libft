@@ -3,24 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: midounhocine <mdho@hotmail.fr>             +#+  +:+       +#+        */
+/*   By: hmidoun <hmidoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/22 15:49:55 by midounhoc         #+#    #+#             */
-/*   Updated: 2019/02/13 12:04:17 by midounhoc        ###   ########.fr       */
+/*   Created: 2019/04/15 15:10:12 by hmidoun           #+#    #+#             */
+/*   Updated: 2019/04/15 15:33:24 by hmidoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void    ft_striteri(char *s, void(*f)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-    int i;
+	int i;
 
-    i = 0;
-    if(s && f)
-    {
-         while(s[i])
-        {
-            f(i,s+i);
-            i++;
-        }
-    }
+	i = 0;
+	if (s && f)
+	{
+		while (s[i])
+		{
+			f(i, s + i);
+			i++;
+		}
+	}
 }

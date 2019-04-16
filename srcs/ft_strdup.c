@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hmidoun <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: hmidoun <hmidoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/12 16:42:49 by hmidoun           #+#    #+#             */
-/*   Updated: 2019/02/13 14:38:47 by midounhoc        ###   ########.fr       */
+/*   Updated: 2019/04/15 15:07:31 by hmidoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ char	*ft_strdup(const char *src)
 {
 	char	*tmp;
 
-    tmp = ft_strnew(ft_strlen(src));
-    if(!tmp)
-        return(NULL);
-    tmp = ft_strcpy(tmp, src);
+	tmp = ft_strnew(ft_strlen(src));
+	if (!tmp)
+		return (NULL);
+	tmp = ft_strcpy(tmp, src);
 	return (tmp);
 }
